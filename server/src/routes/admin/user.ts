@@ -22,8 +22,6 @@ router.get('/captcha', function (req:any, res) {
   })
   req.session.captcha = captcha.text
   req.session.a = "aaa"
-  console.log(11111)
-  console.log(req.session.captcha)
   
   res.type('svg')
   res.json({ captcha: captcha.data })
@@ -119,7 +117,7 @@ router.post('/update', async (req, res, next) => {
 })
 
 /**
- * 修改用户
+ * 删除用户
  */
  router.post('/delete', async (req, res, next) => {
   let resulte = await AdminUser.delete({ id: req.body.id })

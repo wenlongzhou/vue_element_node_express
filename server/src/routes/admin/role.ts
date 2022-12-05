@@ -51,7 +51,7 @@ router.post('/update', async (req, res, next) => {
 })
 
 /**
- * 修改角色
+ * 删除角色
  */
  router.post('/delete', async (req, res, next) => {
   let resulte = await AdminRole.delete({ id: req.body.id })
